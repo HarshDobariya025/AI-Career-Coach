@@ -1,2 +1,5 @@
 npx shadcn@latest add accordion badge alert-dialog card dialog dropdown-menu input label progress radio-group select sonner tabs textarea
 npm install next-themes
+
+npm i inngest
+npm i -D prisma  // database
