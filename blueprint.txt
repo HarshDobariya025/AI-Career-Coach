@@ -3,3 +3,4 @@ npm install next-themes
 
 npm i inngest
 npm i -D prisma  // database
+npx prisma migrate dev --name create-models // push these schema to database
