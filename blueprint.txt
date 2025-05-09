@@ -3,4 +3,7 @@ npm install next-themes
 
 npm i inngest
 npm i -D prisma  // database
-npx prisma migrate dev --name create-models // push these schema to database
+npx prisma migrate dev --name create-models // push these schema to database,  do this when all schemas are ready
+
+//onboarding
+npm i react-hook-form zod @hookform/resolvers       //@@hookform/resolvers makes sure that previous  to works
