@@ -44,6 +44,8 @@ const OnboardingForm = ({ industries }) => {
     resolver: zodResolver(onboardingSchema),
   }); 
 
+  const watchIndustry = watch("industry"); //if industry is selected then only show subindustry
+
   const {
     loading: updateLoading,
     fn: updateUserFn,
@@ -71,9 +73,7 @@ const OnboardingForm = ({ industries }) => {
       router.push("/dashboard");
       router.refresh();
     }
-  }, [updateResult, updateLoading]);
-
-  const watchIndustry = watch("industry"); //if industry is selected then only show subindustry
+  }, [updateResult, updateLoading]); 
 
   return (
     <div className="flex items-center justify-center bg-background">
