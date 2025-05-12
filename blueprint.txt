@@ -7,3 +7,9 @@ npx prisma migrate dev --name create-models // push these schema to database,  d
 
 //onboarding
 npm i react-hook-form zod @hookform/resolvers       //@@hookform/resolvers makes sure that previous  to works
+
+//Geminie api
+npm i @google/generative-ai 
+
+//for loading indicator
+npm i react-spinners
