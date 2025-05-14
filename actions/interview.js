@@ -130,11 +130,9 @@ export async function saveQuizResult(questions, answers, score) {
 export async function getAssessments() {
   const { userId } = await auth();
   if (!userId) throw new Error("Unauthorized");
-
   const user = await db.user.findUnique({
     where: { clerkUserId: userId },
   });
-
   if (!user) throw new Error("User not found");
 
   try {
@@ -143,7 +141,7 @@ export async function getAssessments() {
         userId: user.id,
       },
       orderBy: {
-        createdAt: "asc",
+        createdAt: "asc",   //ascending order
       },
     });
 
