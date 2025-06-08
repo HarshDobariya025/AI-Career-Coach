@@ -22,3 +22,6 @@ npm i react-spinners
 npm i date-fns              //for date
 npm install recharts        //for charts
 
+//markdown editor & html2pdf  - used in resume
+npm i @uiw/react-md-editor
+npm i html2pdf

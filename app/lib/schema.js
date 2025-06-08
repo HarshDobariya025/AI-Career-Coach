@@ -27,6 +27,7 @@ export const onboardingSchema = z.object({
   ),
 });
 
+// Resume Builder -------------------------------------------------------------------------------
 export const contactSchema = z.object({
   email: z.string().email("Invalid email address"),
   mobile: z.string().optional(),
@@ -43,7 +44,7 @@ export const entrySchema = z
     description: z.string().min(1, "Description is required"),
     current: z.boolean().default(false),
   })
-  .refine(
+  .refine(  // for checkbox
     (data) => {
       if (!data.current && !data.endDate) {
         return false;
@@ -65,6 +66,7 @@ export const resumeSchema = z.object({
   projects: z.array(entrySchema),
 });
 
+// Cover Letter Builder -------------------------------------------------------------------------
 export const coverLetterSchema = z.object({
   companyName: z.string().min(1, "Company name is required"),
   jobTitle: z.string().min(1, "Job title is required"),
